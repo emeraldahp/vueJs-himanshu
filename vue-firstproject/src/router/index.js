@@ -35,12 +35,14 @@ const router = createRouter({
       path: '/aboutyou',
       name: 'aboutyou',
       component: AboutYou,
+      props: true
       
     },
     {
       path: '/products',
       name: 'products',
       component: ProductTable,
+      props:true
       
     }
     

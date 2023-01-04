@@ -3,7 +3,7 @@
  
 import ProductTable from './ProductTable.vue'
 export default {    
-    name: "About",
+    name: "aboutyou",
     
     components: {
         ProductTable
@@ -24,7 +24,11 @@ export default {
         about:function(e){
             e.preventDefault()
             console.log( this.AboutForm.inpFname1, this.AboutForm.inpLname1, this.AboutForm.inpPin1)
-            this.$router.push({ path: "/products" });
+            this.$router.push({ name: "products" ,
+                params: {
+                    message:this.AboutForm.inpFname1
+                }
+            });
 
         }
     }
@@ -41,6 +45,6 @@ export default {
             <button v-on:click='about'>Abt</button>
             
         </form>
-        <product-table :message="AboutForm.inpFname1"/>
+        <!-- <product-table :message="AboutForm.inpFname1"/>-->
     </div>
 </template>

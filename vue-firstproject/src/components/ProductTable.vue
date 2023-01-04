@@ -2,7 +2,14 @@
 <script>
 
 export default{
+    name:'products',
     props:['message'],
+
+    methods:{
+        goBack(){
+            this.$router.push({ path: "/aboutyou"})
+        }
+    }
     
 }
 </script>
@@ -22,6 +29,6 @@ export default{
             <td>2000</td>
         </tr>
     </table>
-    
+    <button v-on:click='goBack'>GoBack</button>
     </div>
 </template>
