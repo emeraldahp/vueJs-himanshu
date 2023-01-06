@@ -19,6 +19,7 @@ import AboutYou from './components/AboutYou.vue'
         <RouterLink to="/aboutyou">AboutYou</RouterLink>
         <RouterLink to="/products">Products</RouterLink>
       </nav>
+      <br>
     </div>
   </header>
 

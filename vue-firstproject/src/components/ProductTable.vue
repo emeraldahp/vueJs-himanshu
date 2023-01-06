@@ -4,10 +4,12 @@
 export default{
     name:'products',
     props:['message'],
-
+    
     methods:{
+
         goBack(){
             this.$router.push({ path: "/aboutyou"})
+
         }
     }
     
@@ -19,6 +21,10 @@ export default{
     <br>
     <h1>ProductCatalog</h1>
     <h1>{{message}}</h1>
+
+    First Name : {{ $route.query.inpFname1 }} <br>
+    Last Name : {{ $route.query.inpLname1 }} <br>
+    Pincode : {{ $route.query.inpPin1 }} <br>
     <table>
         <tr>
             <th>ProductName</th>
