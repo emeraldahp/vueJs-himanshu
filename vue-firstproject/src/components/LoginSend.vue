@@ -2,9 +2,17 @@
 import router from "../router/index"    
 import axios from "axios"    
 export default {    
-    name: "Login",    
+    name: "Login", 
+    data(){
+        return{
+            loginData:{
+                username: null,
+                password: null
+            }
+        }
+    },
     methods: {    
-        login: (e) => {
+        login(e){
             e.preventDefault()    
             let username = "username"   
             let password = "password"    
@@ -14,8 +22,8 @@ export default {
                     password: password  
                 }  
             
-                console.log("loginFunction")
-                axios.post("/api/login", data)
+                console.log("loginFunction", this.loginData)
+                axios.post("/api/login", this.loginData)
                 .then((response) => {    
                     console.log("Logged in")
                     router.push("/dashboard")    
@@ -34,8 +42,8 @@ export default {
 <template>
     <div>
     <form v-on:submit="login">
-        Username: <input type="text" name="username">
-        Password: <input type="text" name="password">
+        Username: <input type="text" v-model="loginData.username" name="username">
+        Password: <input type="text" v-model="loginData.password" name="password">
         <input type="submit" value="Login">
     </form>
     </div>
