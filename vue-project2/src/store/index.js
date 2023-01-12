@@ -7,7 +7,11 @@ export default createStore({
     data1: "hello, this is data1",
     data2: "hello, this is data2"
  },
- getters: {},
+ getters: {
+    firstWordData1:state=>{
+        return state.data1.split(' ')[0]
+    }
+ },
  mutations: {
     changeData1(state, payload){
         state.data1 = payload
