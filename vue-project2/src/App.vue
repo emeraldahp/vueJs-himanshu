@@ -11,6 +11,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/axiosget">AxiosGet</RouterLink>
         <RouterLink to="/axiospost">AxiosPost</RouterLink>
+        <RouterLink to="/compone">CompOne</RouterLink>
+        <RouterLink to="/comptwo">CompTwo</RouterLink> 
       </nav>
     </div>
   </header>
