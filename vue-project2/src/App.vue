@@ -1,25 +1,19 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import AboutYou from './components/AboutYou.vue'
-
 </script>
 
 <template>
   <header>
     
-
     <div class="wrapper">
-      <br>
+    
+
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink> 
-        <RouterLink to="/test">Test</RouterLink>  
-        <RouterLink to="/login">Login</RouterLink>
-        <RouterLink to="/aboutyou">AboutYou</RouterLink>
-        <RouterLink to="/products">Products</RouterLink>
+        <RouterLink to="/axiosget">AxiosGet</RouterLink>
+        <RouterLink to="/axiospost">AxiosPost</RouterLink>
+        <RouterLink to="/compone">CompOne</RouterLink>
+        <RouterLink to="/comptwo">CompTwo</RouterLink> 
       </nav>
-      <br>
     </div>
   </header>
 

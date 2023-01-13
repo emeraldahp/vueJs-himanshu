@@ -1,6 +1,6 @@
 
 <script>
- 
+
 import ProductTable from './ProductTable.vue'
 export default {    
     name: "aboutyou",
@@ -24,12 +24,11 @@ export default {
         about:function(e){
             e.preventDefault()
             console.log( this.AboutForm.inpFname1, this.AboutForm.inpLname1, this.AboutForm.inpPin1)
-            this.$router.push({ name: "products" ,
-                params: {
-                    message:this.AboutForm.inpFname1
-                }
-            });
-
+            
+            this.$router.push({ path:"/products",
+            query : this.AboutForm
+        });
+            
         }
     }
     

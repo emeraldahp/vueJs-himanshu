@@ -5,6 +5,7 @@ import LoginSend from '../components/LoginSend.vue'
 import AboutYou from '../components/AboutYou.vue'
 import ProductTable from'../components/ProductTable.vue'
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
